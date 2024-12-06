@@ -6,8 +6,8 @@ import {
   useMainButton,
   useViewport,
 } from "@telegram-apps/sdk-react";
-import Link from "next/link";
-import Arrow from "@/assets/Arrow";
+import styles from '../css_modules/HOMEPAGE.module.css';
+import { images } from '../StoreImages/StoreImages';
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -64,47 +64,75 @@ export default function Home() {
     }
   };
   return (
-    <main className="">
-      <h1 className="text-left text-2xl font-bold  font-sans mb-4 ">
-        Telegram Miniapp Boilerplate
-      </h1>
-      <div className="grid xl:grid-cols-4 grid-cols-1 lg:grid-cols-2  gap-4 ">
-        <div className="p-4 hover:bg-gray-200 w-full bg-gray-100 rounded-lg">
-          <Link href="https://docs.telegram-mini-apps.com/" target="_blank">
-            <div className="flex justify-between">
-              <h1 className="text-xl font-bold">Docs</h1>
-              <Arrow color="black" />
-            </div>
-            <p className="text-sm text-gray-700">
-              Find in-depth information on making telegram miniapps for Rabble.
-            </p>
-          </Link>
-        </div>
-        <div className="p-4  w-full bg-gray-100 rounded-lg">
-          <h2 className="text-lg font-bold">Test Modals</h2>
-          <p className="text-sm">Click to see how modals work</p>
-          <div className="flex gap-2 mt-2">
-            <Button variant={"rabble"} size={"half"} onClick={handlePopUp}>
-              Launch Popup
-            </Button>
-            <Button variant={"tertiary"} size={"half"} onClick={handleShare}>
-              Share URL
-            </Button>
-          </div>
-        </div>
-        <div className="p-4  w-full bg-gray-100 rounded-lg">
-          <h2 className="text-lg font-bold">Test Buttons</h2>
-          <p className="text-sm">Click to see how buttons work</p>
-          <div className="flex gap-2 mt-2">
-            <Button variant={"rabble"} size={"half"} onClick={handleMainBtn}>
-              Toggle Main Button
-            </Button>
-            <Button variant={"tertiary"} size={"half"} onClick={handleViewport}>
-              Expand Webview
-            </Button>
-          </div>
-        </div>
+<div className={styles.homePage1}>
+      <img className={styles.altcoinbgIcon} alt="" src={images.AltcoinBg} />
+      <div className={styles.profilerectangle} />
+      <img className={styles.userlogoIcon} alt="" src={images.UserLogo} />
+      <b className={styles.wxyz}>WXYZ</b>
+      <img className={styles.useropenicon} alt="" src={images.UserOpenIcon} />
+      <div className={styles.walletButton}>
+        <Button />
       </div>
-    </main>
+      <div className={styles.altcoinrec} />
+      <div className={styles.tokenpricerec} />
+      <img className={styles.days12leftIcon} alt="" src={images.Days12Left} />
+      <b className={styles.altcoinist}>ALTCOINIST</b>
+      <div 
+        className={styles.homePage1Child} 
+        onClick={() => navigate('/')}
+        style={{ cursor: 'pointer' }}
+      />
+      <div 
+        className={styles.homePage1Item} 
+        onClick={() => navigate('/home2')}
+        style={{ cursor: 'pointer' }}
+      />
+      <div 
+        className={styles.homePage1Inner} 
+        onClick={() => navigate('/home3')}
+        style={{ cursor: 'pointer' }}
+      />
+      <img className={styles.buttonsBackground} alt="" src={images.ButtonsBackground} />
+      <img className={styles.cursorbuttonsIcon} alt="" src={images.CursorButtons} />
+      <b className={styles.apply}>Apply To Organize ICO</b>
+      <div className={styles.apply1}>
+        Apply to organize an ICO by ensuring compliance with legal and regulatory requirements.
+      </div>
+      <img className={styles.altcoinimgIcon} alt="" src={images.AltcoinImg} />
+      <img className={styles.activeborderimageIcon} alt="" src={images.ActiveBorderImage} />
+      <b className={styles.active}>ACTIVE</b>
+      <b className={styles.tokenPrice}>TOKEN PRICE</b>
+      <b className={styles.b}>
+        <span className={styles.txt}>
+          <p className={styles.p}>{`10/11/2024         `}</p>
+          <p className={styles.p1}>16:30</p>
+        </span>
+      </b>
+      <b className={styles.b1}>
+        <span className={styles.txt}>
+          <p className={styles.p}>{`30/11/2024         `}</p>
+          <p className={styles.p1}>16:30</p>
+        </span>
+      </b>
+      <b className={styles.d02h20m}>12d 02h 20m 48s LEFT</b>
+      <b className={styles.usdt}>0.009122 USDT</b>
+      <img className={styles.mutliplediscIcon} alt="" src={images.MutlipleDisc} />
+      <img className={styles.discIcon} alt="" src={images.Disc} />
+      <div className={styles.full} />
+      <div className={styles.full80} />
+      <img className={styles.calenderIcon} alt="" src={images.calender} />
+      <img className={styles.calenderIcon1} alt="" src={images.calender}/>
+      <img className={styles.clockIcon} alt="" src={images.clock} />
+      <img className={styles.clockIcon1} alt="" src={images.clock} />
+      <img className={styles.timerIcon} alt="" src={images.Timer} />
+      <div className={styles.nftimagerec} />
+      <div className={styles.stakeimagerec} />
+      <img className={styles.nftimageIcon} alt="" src={images.NftImage} />
+      <img className={styles.stakeimageIcon} alt="" src={images.StakeImage} />
+      <div className={styles.nfttextrec} />
+      <div className={styles.rectangleDiv} />
+      <b className={styles.nft}>NFT</b>
+      <b className={styles.stake}>STAKE</b>
+    </div>
   );
 }
